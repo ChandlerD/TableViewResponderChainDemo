@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, canPerformAction action: Selector, forRowAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject) -> Bool {
         
         /*
-        You can choose what you want to do with the actions here. You don't need to implement the selectors, and can do whatever you want to do for each action inside this method.
+        You can choose what you want to do with the actions here. You don't need to implement the actions, and can do whatever you want to do for each action inside this method. If you choose not to implement the actions, then you need to return false. Only return true if you are going to implement the actions.
         */
         
         return true
