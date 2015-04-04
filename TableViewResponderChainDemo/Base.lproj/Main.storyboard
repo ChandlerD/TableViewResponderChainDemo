@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TableViewResponderChainDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="300" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="NLU-wB-cQI">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell" rowHeight="300" id="c3c-QO-lQ1" customClass="CustomTableViewCell" customModule="TableViewResponderChainDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c3c-QO-lQ1" id="IKd-Un-vJX">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9g-XI-85l">
+                                                    <rect key="frame" x="85" y="135" width="30" height="30"/>
+                                                    <state key="normal" title="Red">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="changeRed:" destination="x5A-6p-PRh" eventType="touchUpInside" id="2JP-Zr-R1E"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NS2-ex-omc">
+                                                    <rect key="frame" x="279" y="135" width="42" height="30"/>
+                                                    <state key="normal" title="Green">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="changeGreen:" destination="x5A-6p-PRh" eventType="touchUpInside" id="s0b-io-WAc"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ea3-ow-bh9">
+                                                    <rect key="frame" x="485" y="135" width="31" height="30"/>
+                                                    <state key="normal" title="Blue">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="changeBlue:" destination="x5A-6p-PRh" eventType="touchUpInside" id="kUg-26-kPf"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="NS2-ex-omc" secondAttribute="centerY" id="8R7-e5-22b"/>
+                                                <constraint firstItem="e9g-XI-85l" firstAttribute="leading" secondItem="IKd-Un-vJX" secondAttribute="leadingMargin" constant="77" id="9Io-ZS-ruV"/>
+                                                <constraint firstAttribute="centerY" secondItem="e9g-XI-85l" secondAttribute="centerY" id="JOu-A4-OIX"/>
+                                                <constraint firstAttribute="centerX" secondItem="NS2-ex-omc" secondAttribute="centerX" id="Odr-YC-5rR"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ea3-ow-bh9" secondAttribute="trailing" constant="76" id="YfS-4I-lM9"/>
+                                                <constraint firstAttribute="centerY" secondItem="ea3-ow-bh9" secondAttribute="centerY" id="jIM-Eb-gxj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="fEI-t9-J2o"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="rKE-W8-TkN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NLU-wB-cQI" secondAttribute="trailing" id="3A6-Jb-rI0"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="NLU-wB-cQI" secondAttribute="bottom" id="3fw-K1-MMB"/>
+                            <constraint firstItem="NLU-wB-cQI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="OYP-nF-PaK"/>
+                            <constraint firstItem="NLU-wB-cQI" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="hYV-bf-nVt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="405" y="415.5"/>
+        </scene>
+    </scenes>
+</document>
